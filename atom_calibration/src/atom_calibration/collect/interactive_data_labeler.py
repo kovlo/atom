@@ -184,7 +184,8 @@ class InteractiveDataLabeler:
             self.C = 0
             self.D = 0
             self.number_iterations = 15  # RANSAC number of iterations
-            self.ransac_threshold = 0.01  # RANSAC point-to-plane distance threshold to consider inliers
+            #self.ransac_threshold = 0.01  # RANSAC point-to-plane distance threshold to consider inliers
+            self.ransac_threshold = 0.1  # RANSAC point-to-plane distance threshold to consider inliers
             # Chessboard point tracker distance threshold
             self.tracker_threshold = math.sqrt(((calib_pattern['dimension']['x'] - 1) * calib_pattern['size']) ** 2 +
                                                ((calib_pattern['dimension']['y'] - 1) * calib_pattern[
