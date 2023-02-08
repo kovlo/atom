@@ -202,6 +202,11 @@ def createPatternLabels(args, dataset, step=0.02):
 
             # change accordingly to the first camera to give chessboard first poses
             if sensor['modality'] == 'rgb':
+                sensor['camera_info']['K'] = [832.206134, 0.000000, 656.661195,
+                                                0.000000, 830.218041, 480.638065,
+                                                0.000000, 0.000000, 1.000000]
+                sensor['camera_info']['D'] = [-0.327172, 0.094740, 0.000516, -0.001138, 0.000000]
+
                 K = np.ndarray((3, 3), dtype=np.float, buffer=np.array(sensor['camera_info']['K']))
                 D = np.ndarray((5, 1), dtype=np.float, buffer=np.array(sensor['camera_info']['D']))
 
