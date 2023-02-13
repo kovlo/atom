@@ -15,6 +15,10 @@ readchar
 urdf-parser-py
 SQLAlchemy
 open3d
+setuptools==65
+numpy==1.20.3
+pytictoc
+prettytable 
 
 
 
